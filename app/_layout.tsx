@@ -1,7 +1,8 @@
 import { Tabs } from "expo-router";
 import { TimerProvider } from "@/context/TimerProvider";
 import { Ionicons } from "@expo/vector-icons";
-import Background from "@/components/Backgorund";
+import Background from "@/components/Background";
+import ToastNotification from "@/components/ToastNotification";
 import "./global.css";
 
 export default function Layout() {
@@ -17,7 +18,6 @@ export default function Layout() {
             }}
           />
 
-          {/* Settings Tab */}
           <Tabs.Screen
             name="settings"
             options={{
@@ -28,6 +28,8 @@ export default function Layout() {
             }}
           />
         </Tabs>
+
+        <ToastNotification />
       </Background>
     </TimerProvider>
   );
